@@ -117,6 +117,7 @@ if (protobuf_BUILD_SHARED_LIBS)
   set(protobuf_SHARED_OR_STATIC "SHARED")
 else (protobuf_BUILD_SHARED_LIBS)
   set(protobuf_SHARED_OR_STATIC "STATIC")
+  set(CMAKE_POSITION_INDEPENDENT_CODE true)
   # In case we are building static libraries, link also the runtime library statically
   # so that MSVCR*.DLL is not required at runtime.
   # https://msdn.microsoft.com/en-us/library/2kzt1wy3.aspx
